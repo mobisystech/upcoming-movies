@@ -16,7 +16,7 @@ import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 
 import com.mobisys.android.upcoming_movies.assignment.Constants;
-import com.mobisys.android.upcoming_movies.assignment.rest.api.AssignmentApi;
+import com.mobisys.android.upcoming_movies.assignment.rest.api.MovieApi;
 import retrofit.ErrorHandler;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
@@ -25,8 +25,8 @@ import retrofit.mime.TypedInput;
 
 public class RestClient {
 
-	public static String Google_Places_END_POINT = "https://api.themoviedb.org/3";
-    private static AssignmentApi mGooglePlacesApi;
+	public static String THE_MOVIE_DB_BASE_URL = "https://api.themoviedb.org/3";
+    private static MovieApi mMovieApi;
 
     public static class NetworkErrorException extends RuntimeException {
     }
@@ -93,25 +93,25 @@ public class RestClient {
     private RestClient() {
 	}
 
-    public static AssignmentApi AssignmentApi(Context context) {
-        if(mGooglePlacesApi ==null){
-            setupGooglePlacesClient(context);
+    public static MovieApi getMovieApi(Context context) {
+        if(mMovieApi ==null){
+            setupRestClient(context);
         }
 
-        return mGooglePlacesApi;
+        return mMovieApi;
     }
 
-    private static void setupGooglePlacesClient(final Context context) {
+    private static void setupRestClient(final Context context) {
 		OkHttpClient okClient = new OkHttpClient();
 		
 		RestAdapter.Builder builder = new RestAdapter.Builder()
-                .setEndpoint(Google_Places_END_POINT)
+                .setEndpoint(THE_MOVIE_DB_BASE_URL)
                 .setErrorHandler(new CustomErrorHandler())
                 .setConverter(new JacksonConverter())
                 .setClient(new OkClient(okClient))
                 .setLogLevel(Constants.DEBUG ? RestAdapter.LogLevel.FULL : RestAdapter.LogLevel.NONE);
 
 		RestAdapter restAdapter = builder.build();
-        mGooglePlacesApi = restAdapter.create(AssignmentApi.class);
+        mMovieApi = restAdapter.create(MovieApi.class);
     }
 }

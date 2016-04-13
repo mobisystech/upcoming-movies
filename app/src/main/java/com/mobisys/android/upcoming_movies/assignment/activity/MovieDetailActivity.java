@@ -47,7 +47,7 @@ public class MovieDetailActivity extends AppCompatActivity {
     private void getMovieDetails() {
         Movie movie =getIntent().getExtras().getParcelable(Movie.MOVIE);
         mProgressDailog = ProgressDialog.show(MovieDetailActivity.this, getResources().getString(R.string.please_wait));
-        RestClient.AssignmentApi(MovieDetailActivity.this).movieDetail(Constants.API_KEY, movie.getId(), new RestCallback<Movie>() {
+        RestClient.getMovieApi(MovieDetailActivity.this).movieDetail(Constants.API_KEY, movie.getId(), new RestCallback<Movie>() {
             @Override
             public void failure(String restErrors, boolean networkError) {
                 if (mProgressDailog != null && mProgressDailog.isShowing()) mProgressDailog.dismiss();
@@ -69,7 +69,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.txtOverview)).setText(movie.getOverview());
         ((RatingBar)findViewById(R.id.ratingBar)).setRating(movie.getPopularity());
 
-        RestClient.AssignmentApi(MovieDetailActivity.this).getImages(Constants.API_KEY, movie.getId(), new RestCallback<ImageResponse>() {
+        RestClient.getMovieApi(MovieDetailActivity.this).getImages(Constants.API_KEY, movie.getId(), new RestCallback<ImageResponse>() {
             @Override
             public void failure(String restErrors, boolean networkError) {
                 if (mProgressDailog != null && mProgressDailog.isShowing()) mProgressDailog.dismiss();

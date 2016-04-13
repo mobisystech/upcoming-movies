@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private void initScreen() {
         getSupportActionBar().hide();
         mProgressDailog = ProgressDialog.show(MainActivity.this, getResources().getString(R.string.please_wait));
-        RestClient.AssignmentApi(MainActivity.this).upcomingMovies(Constants.API_KEY, new RestCallback<MovieResponse>() {
+        RestClient.getMovieApi(MainActivity.this).upcomingMovies(Constants.API_KEY, new RestCallback<MovieResponse>() {
             @Override
             public void failure(String restErrors, boolean networkError) {
                 if (mProgressDailog != null && mProgressDailog.isShowing()) mProgressDailog.dismiss();

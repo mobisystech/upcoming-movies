@@ -12,7 +12,7 @@ import retrofit.http.Query;
 /**
  * Created by mahavir on 10/6/15.
  */
-public interface AssignmentApi {
+public interface MovieApi {
 
     @GET("/movie/upcoming")
     public void upcomingMovies(@Query("api_key") String apikey, RestCallback<MovieResponse> restCallback);
