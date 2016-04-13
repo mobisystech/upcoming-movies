@@ -13,7 +13,8 @@
             android:scaleType="centerCrop"
             android:layout_alignParentLeft="true"
             android:layout_margin="5dp"/>
-        <assignment.mobisys.com.assignment.widget.StyleableTextView android:id="@+id/txt_movie_title"
+        <com.mobisys.android.upcoming_movies.assignment.widget.StyleableTextView
+            android:id="@+id/txt_movie_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
@@ -37,14 +38,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/layout1">
-        <assignment.mobisys.com.assignment.widget.StyleableTextView android:id="@+id/txt_realese_date"
+        <com.mobisys.android.upcoming_movies.assignment.widget.StyleableTextView
+            android:id="@+id/txt_realese_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:padding="5dp"
             app:font="@string/font_lato_regular"
             android:text="3/2/14"/>
-        <assignment.mobisys.com.assignment.widget.StyleableTextView  android:id="@+id/txt_adult"
+        <com.mobisys.android.upcoming_movies.assignment.widget.StyleableTextView
+            android:id="@+id/txt_adult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

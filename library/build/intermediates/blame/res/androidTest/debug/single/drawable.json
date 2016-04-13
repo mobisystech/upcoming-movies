@@ -1,6 +1,10 @@
 [
     {
-        "merged": "E:\\projects\\Assignment\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\vpi__tab_indicator.xml",
-        "source": "E:\\projects\\Assignment\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\vpi__tab_indicator.xml"
+        "merged": "/Users/priyank/work/android/test/upcoming-movies/library/build/intermediates/res/merged/androidTest/debug/drawable/vpi__tab_indicator.xml",
+        "source": "/Users/priyank/work/android/test/upcoming-movies/library/build/intermediates/bundles/debug/res/drawable/vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "/Users/priyank/work/android/test/upcoming-movies/E:\\projects\\Assignment\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "/Users/priyank/work/android/test/upcoming-movies/E:\\projects\\Assignment\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\vpi__tab_indicator.xml"
     }
 ]

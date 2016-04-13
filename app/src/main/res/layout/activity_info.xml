@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="assignment.mobisys.com.assignment.activity.InfoActivity">
+    tools:context="com.mobisys.android.upcoming_movies.assignment.activity.InfoActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/toolbar_background">
-            <assignment.mobisys.com.assignment.widget.StyleableTextView
+            <com.mobisys.android.upcoming_movies.assignment.widget.StyleableTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -25,7 +25,7 @@
                 android:textStyle="bold" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
-    <assignment.mobisys.com.assignment.widget.StyleableTextView
+    <com.mobisys.android.upcoming_movies.assignment.widget.StyleableTextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
